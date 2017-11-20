@@ -1,2 +1,2 @@
 # Downmon Pokeshow
-Wat een ontzettend gaaf spel jongens! \n
+Wat een ontzettend gaaf spel jongens!
