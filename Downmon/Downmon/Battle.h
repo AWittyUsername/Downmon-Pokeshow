@@ -15,6 +15,7 @@
 #endif
 class Battle{
 	public:
+	Battle();
 	void initializeBattle();
 	void drawBattleMenu();
 	void drawBattleScene();

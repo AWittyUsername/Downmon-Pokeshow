@@ -1,5 +1,6 @@
 // Menu.h
 #include <MI0283QT9.h>
+#include "Battle.h"
 #ifndef PRIMARY
 #define PRIMARY RGB(255,255,255)
 #endif
@@ -22,14 +23,17 @@ class Menu{
 	void selectOption();
 	void initializeCredits();
 	void drawCredits();
+	void initializeHighscore();
+	void drawHighscore();
+	void initializeBattle();
 	void previousScreen();
 	private:
 		uint8_t selectedOption;
 		MI0283QT9 lcd;
 		enum MenuState{
 			Main,
-			Battle,
-			Highscores,
+			inBattle,
+			Highscore,
 			Credits
 			};
 		MenuState menuState;

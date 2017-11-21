@@ -1,4 +1,7 @@
 #include "Battle.h"
+	Battle::Battle(){
+		initializeBattle();
+	}
 	void Battle::initializeBattle(){
 		drawBattleScene();
 		drawBattleMenu();
