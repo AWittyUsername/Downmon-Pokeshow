@@ -67,6 +67,13 @@
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../Downmon</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/GraphicsLib</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/MI0283QT9</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/ArduinoNunchuk</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/digitalWriteFast</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>D:/Program Files (x86)/Arduino/libraries</Value>
       <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Users/wesle/Documents/Arduino/libraries</Value>
@@ -102,6 +109,13 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../Downmon</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/GraphicsLib</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/MI0283QT9</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/ArduinoNunchuk</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/digitalWriteFast</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>D:/Program Files (x86)/Arduino/libraries</Value>
       <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Users/wesle/Documents/Arduino/libraries</Value>
@@ -133,10 +147,11 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>../../../Downmon;D:/Program Files (x86)/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/wesle/Documents/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;D:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>../../../Downmon;D:/Program Files (x86)/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/wesle/Documents/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;D:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/wesle/Documents/Arduino/libraries/MI0283QT9;C:/Users/wesle/Documents/Arduino/libraries/GraphicsLib;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src;C:/Users/wesle/Documents/Arduino/libraries/digitalWriteFast;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Users/wesle/Documents/Arduino/libraries/Nunchuck;C:/Users/wesle/Documents/Arduino/libraries/ArduinoNunchuk;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
-      <VisualMicroSettings xmlns="">
+      <VisualMicroSettings>
         <ValidatedAS7>1</ValidatedAS7>
+        <arduino.upload.port>COM4</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -166,6 +181,13 @@
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../Downmon</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/GraphicsLib</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/MI0283QT9</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/ArduinoNunchuk</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/digitalWriteFast</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>D:/Program Files (x86)/Arduino/libraries</Value>
       <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Users/wesle/Documents/Arduino/libraries</Value>
@@ -201,6 +223,13 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../Downmon</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/GraphicsLib</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/MI0283QT9</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/ArduinoNunchuk</Value>
+      <Value>C:/Users/wesle/Documents/Arduino/libraries/digitalWriteFast</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>D:/Program Files (x86)/Arduino/libraries</Value>
       <Value>D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Users/wesle/Documents/Arduino/libraries</Value>
@@ -232,15 +261,19 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>../../../Downmon;D:/Program Files (x86)/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/wesle/Documents/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;D:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>../../../Downmon;D:/Program Files (x86)/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/wesle/Documents/Arduino/libraries;D:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;D:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;D:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;D:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/wesle/Documents/Arduino/libraries/MI0283QT9;C:/Users/wesle/Documents/Arduino/libraries/GraphicsLib;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src;C:/Users/wesle/Documents/Arduino/libraries/digitalWriteFast;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;D:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Users/wesle/Documents/Arduino/libraries/Nunchuck;C:/Users/wesle/Documents/Arduino/libraries/ArduinoNunchuk;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
-      <VisualMicroSettings xmlns="">
+      <VisualMicroSettings>
         <ValidatedAS7>1</ValidatedAS7>
+        <arduino.upload.port>COM4</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Downmon.ino">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Game.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="__vm\.Downmon.vsarduino.h">
