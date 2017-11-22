@@ -1,3 +1,5 @@
+#include "GameObjects/Move.h"
+#include "GameObjects/Victim.h"
 #include "Menu.h"
 #include "Battle.h"
 #include <stdio.h>
@@ -25,6 +27,10 @@ int main(){
 			}
 			if(nunchuck.cButton){
 				mainMenu.selectOption();
+				if(mainMenu.menuState == Menu::inBattle){
+					Battle pvpBattle;
+					pvpBattle.gameLoop(nunchuck); //This starts the game loop! main() will not continue until it is exited.
+				}
 			}
 			else if(nunchuck.zButton){
 				mainMenu.previousScreen();
@@ -33,7 +39,9 @@ int main(){
 		}
 	return 0;
 }
-void initializeScreen(){			//Basic function to initialize both the display and nunchuck
+
+//Basic function to initialize both the display and nunchuck
+void initializeScreen(){			
 	init();
 	nunchuck.init();
 	lcd.begin();	

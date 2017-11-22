@@ -19,7 +19,7 @@ class Menu{
 	void initializeMenu();
 	void drawMenu();
 	void drawOptions();
-	void setSelectedOption(char option);
+	void setSelectedOption(char);
 	void selectOption();
 	void initializeCredits();
 	void drawCredits();
@@ -27,16 +27,16 @@ class Menu{
 	void drawHighscore();
 	void initializeBattle();
 	void previousScreen();
+	enum MenuState{
+		Main,
+		inBattle,
+		Highscore,
+		Credits
+	};
+	MenuState menuState;
 	private:
 		uint8_t selectedOption;
 		MI0283QT9 lcd;
-		enum MenuState{
-			Main,
-			inBattle,
-			Highscore,
-			Credits
-			};
-		MenuState menuState;
 	};
 #endif
 

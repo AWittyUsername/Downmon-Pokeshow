@@ -1,5 +1,4 @@
 // Battle.h
-#include <MI0283QT9.h>
 #ifndef PRIMARY
 #define PRIMARY RGB(255,255,255) 
 #endif
@@ -8,6 +7,9 @@
 #endif
 #ifndef _BATTLE_h
 #define _BATTLE_h
+#include <MI0283QT9.h>
+#include <ArduinoNunchuk.h>
+#include "GameObjects/Victim.h"
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "Arduino.h"
 #else
@@ -15,12 +17,29 @@
 #endif
 class Battle{
 	public:
-	Battle();
 	void initializeBattle();
 	void drawBattleMenu();
 	void drawBattleScene();
+	void gameLoop(ArduinoNunchuk);
+	void setSelectedOption(char);
+	void selectOption();
+	void previousScreen();
+	void initializeDownmon();
+	void allyAttack();
+	void enemyFaint();
 	private:
+	enum BattleOptions{
+		Menu,
+		Attack,
+		Switch,
+		Quit
+	};
+	BattleOptions battleOption;
 	MI0283QT9 lcd;
+	uint8_t selectedOption;
+	uint8_t currentVictim = 0;
+	float enemyHP = 250.0;
+	Victim victimList[10] {{}};
 };
 #endif
 

@@ -52,8 +52,7 @@
 		lcd.drawText(5,170,"(Ga daar maar heen.)",SECONDARY,PRIMARY,1);
 	}
 	void Menu::initializeBattle(){
-		extern Battle pvpBattle;
-		//menuState = inBattle;
+		menuState = inBattle;
 	}
 	//Whenever the nunchuck's Y-axis is moved in the main class this function gets called to check if a new menu option should be selected
 	void Menu::setSelectedOption(char updown){
