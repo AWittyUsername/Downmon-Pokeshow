@@ -10,6 +10,7 @@
 #include <MI0283QT9.h>
 #include <ArduinoNunchuk.h>
 #include "GameObjects/Victim.h"
+#include "ObjectStorage/VictimList.h"
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "Arduino.h"
 #else
@@ -20,13 +21,14 @@ class Battle{
 	void initializeBattle();
 	void drawBattleMenu();
 	void drawBattleScene();
-	void gameLoop(ArduinoNunchuk);
+	void gameLoop();
 	void setSelectedOption(char);
 	void selectOption();
 	void previousScreen();
-	void initializeDownmon();
 	void allyAttack();
-	void enemyFaint();
+	void enemyDies();
+	void initializeDownmon();
+	void quitGame();
 	private:
 	enum BattleOptions{
 		Menu,
@@ -35,11 +37,16 @@ class Battle{
 		Quit
 	};
 	BattleOptions battleOption;
+	ArduinoNunchuk nunchuck = ArduinoNunchuk();
 	MI0283QT9 lcd;
 	uint8_t selectedOption;
-	uint8_t currentVictim = 0;
+	uint8_t currentVictimId = 0;
+	Victim currentVictim;
+	uint8_t currentEnemyId = 1;
+	Victim currentEnemy;
 	float enemyHP = 250.0;
-	Victim victimList[10] {{}};
+	bool gameRunning = 0;
+	VictimList victimList;
 };
 #endif
 

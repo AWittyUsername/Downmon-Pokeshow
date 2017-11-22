@@ -1,3 +1,4 @@
+#include "ObjectStorage/VictimList.h"
 #include "GameObjects/Move.h"
 #include "GameObjects/Victim.h"
 #include "Menu.h"
@@ -29,7 +30,8 @@ int main(){
 				mainMenu.selectOption();
 				if(mainMenu.menuState == Menu::inBattle){
 					Battle pvpBattle;
-					pvpBattle.gameLoop(nunchuck); //This starts the game loop! main() will not continue until it is exited.
+					pvpBattle.gameLoop(); //This starts the game loop! main() will not continue until it is exited.
+					mainMenu.initializeMenu();
 				}
 			}
 			else if(nunchuck.zButton){

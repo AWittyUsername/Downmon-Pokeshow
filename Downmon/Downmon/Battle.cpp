@@ -1,7 +1,7 @@
 #include "Battle.h"
 	//This may very well be the most important piece of code in all of the project!
 	//All the action happens here, if exited the main() function in downmon.ino will continue.
-	void Battle::gameLoop(ArduinoNunchuk nunchuck){
+	void Battle::gameLoop(){
 		initializeBattle();
 		while(1){
 			nunchuck.update();
@@ -14,23 +14,28 @@
 			if(nunchuck.cButton){
 				selectOption();
 			}
+			if(!gameRunning){
+				break;
+			}
 			_delay_ms(50);
 		}
 	}
 	//Initializes the battle display
 	void Battle::initializeBattle(){
 		initializeDownmon();
+		gameRunning = true;
 		drawBattleScene();
 		drawBattleMenu();
 		battleOption = Menu;
+		selectedOption = 0;
 		setSelectedOption(0);
 	}
 	//Draws the battle menu, attack options etc.
 	void Battle::drawBattleMenu(){
 		lcd.drawLine(0,165,340,165,SECONDARY);
 		lcd.drawLine(0,166,340,166,SECONDARY);
-		lcd.drawText(5,200,"What will " + victimList[0].name + " do?",SECONDARY,PRIMARY,1);
-		lcd.drawText(230,180,"Attack",SECONDARY,PRIMARY,1);
+		lcd.drawText(5,200,"What will " + currentVictim.name + " do?",SECONDARY,PRIMARY,1);
+		lcd.drawText(230,180,"Poke",SECONDARY,PRIMARY,1);
 		lcd.drawText(230,200,"Switch",SECONDARY,PRIMARY,1);
 		lcd.drawText(230,220,"Ragequit",SECONDARY,PRIMARY,1);
 	}
@@ -42,13 +47,13 @@
 		lcd.fillRect(20,85,80,80,RGB(20,20,255));						//Sprite
 		lcd.drawRect(200,110,110,40,SECONDARY);							//HP box
 		lcd.fillRoundRect(205,130,100,10,3,RGB(0,255,0));				//Name in hp box
-		lcd.drawText(205,115,victimList[0].name,SECONDARY,PRIMARY,1);	//HP bar
+		lcd.drawText(205,115, currentVictim.name ,SECONDARY,PRIMARY,1);	//HP bar
 		
 		//Enemy downmon - mockup!
-		lcd.fillRect(220,0,80,80,RGB(0,0,0));							//Sprite
+		lcd.fillRect(220,0,80,80,RGB(255,0,0));							//Sprite
 		lcd.drawRect(20,10,110,40,SECONDARY);							//HP box
 		lcd.fillRoundRect(25,30,100,10,3,RGB(0,255,0));					//Name in hp box
-		lcd.drawText(25,15,"Missingno",SECONDARY,PRIMARY,1);			//HP bar
+		lcd.drawText(25,15,currentEnemy.name,SECONDARY,PRIMARY,1);			//HP bar
 	}
 	//Whenever the nunchuck's Y-axis is moved in the game loop this function gets called to check if a new menu option should be selected
 	void Battle::setSelectedOption(char updown){
@@ -77,28 +82,19 @@
 			case 1:
 			break;
 			case 2:	
+			quitGame();
 			break;
 		}
 	}
 	
+	void Battle::initializeDownmon(){
+		currentVictim = victimList.getDownmonById(currentVictimId);
+		currentEnemy = victimList.getDownmonById(currentEnemyId);
+	}
 	//If available will return user to battle menu
 	void Battle::previousScreen(){
 		if(battleOption != Menu){
 		}
-	}
-	
-	
-	//Ew
-	void Battle::initializeDownmon(){
-		victimList[0].downmonId = 0;
-		victimList[0].name = "Gyaradown";
-		victimList[0].spriteId = 0;
-		victimList[0].HP = 20;
-		victimList[0].att = 20;
-		victimList[0].def = 20;
-		victimList[0].spAtt = 20;
-		victimList[0].spDef = 20;
-		victimList[0].spd = 20;
 	}
 	
 	void Battle::allyAttack(){
@@ -109,11 +105,24 @@
 		}
 		else{
 			enemyHP = 0;
-			enemyFaint();
+			enemyDies();
 			
 		}
 	}
-	void Battle::enemyFaint(){
+	void Battle::enemyDies(){
+		lcd.fillRect(220,0,80,80,PRIMARY);								//Remove sprite
+		lcd.fillRect(0,167,340,167,PRIMARY);							//Remove battle chat
+		lcd.drawText(5,200,"Hoera jij wint!",SECONDARY,PRIMARY,1);		//Print win message
+		while(1){
+			nunchuck.update();
+			if(nunchuck.cButton){
+				break;
+			}
+		}
+		gameRunning = false;
+	}
+	void Battle::quitGame(){
+		gameRunning = false;
 	}
 
 

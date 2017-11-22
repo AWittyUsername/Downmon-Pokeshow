@@ -297,12 +297,19 @@
     <Compile Include="Menu.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ObjectStorage\VictimList.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ObjectStorage\VictimList.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="__vm\.Downmon.vsarduino.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GameObjects" />
+    <Folder Include="ObjectStorage" />
     <Folder Include="__vm\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
